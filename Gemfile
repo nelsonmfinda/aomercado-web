@@ -75,8 +75,6 @@ gem 'devise-i18n'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
 # Centralization of locale data collection for Ruby on Rails.
 gem 'rails-i18n'
-# Rails gem of the Bootstrap based admin theme SB Admin 2
-gem 'bootstrap_sb_admin_base_v2'
 # Help ActiveRecord::Enum feature to work fine with I18n and simple_form.
 gem 'enum_help'
 # Minimal authorization through OO design and pure Ruby classes

@@ -19,15 +19,12 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= stylesheet_link_tag    'backoffice', media: 'all', 'data-turbolinks-track': 'reload' %>
   
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'backoffice', 'data-turbolinks-track': 'reload' %>
 </head>
 <body>
-  <h1 class="page-title">
-    BackOffice
-  </h1>
 
   <%= yield %>
 
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'backoffice', 'data-turbolinks-track': 'reload' %>
 </body>
 </html>

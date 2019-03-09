@@ -54,7 +54,6 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-
 # A library for generating fake data such as names, addresses, and phone numbers.
 gem 'faker'
 # Flexible authentication solution for Rails with Warden

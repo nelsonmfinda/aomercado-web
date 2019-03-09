@@ -1,5 +1,31 @@
 {
   "name": "aomercado-web",
-  "private": true,
-  "dependencies": {}
+  "version": "1.0.0",
+  "description": "Mini loja virtual, um projecto do curso completo de Ruby on Rails",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nelsonmfinda/aomercado-web.git"
+  },
+  "keywords": [
+    "mercado",
+    "virtual",
+    "online",
+    "compras",
+    "pagamentos",
+    "loja",
+    "e-commerce"
+  ],
+  "author": "Nelson Mfinda <nelsonmfinda@hotmail.com> (https://nelsonmfinda.me/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nelsonmfinda/aomercado-web/issues"
+  },
+  "homepage": "https://github.com/nelsonmfinda/aomercado-web#readme"
 }

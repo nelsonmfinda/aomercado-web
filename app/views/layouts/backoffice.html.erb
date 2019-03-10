@@ -24,7 +24,26 @@
 </head>
 <body>
 
-  <%= yield %>
+  <%= render partial: "layouts/backoffice_shared/topbar" %>
 
+  <div id="wrapper">
+    <!-- Sidebar -->
+    <%= render partial: "layouts/backoffice_shared/sidebar" %>
+
+    <div id="content-wrapper">
+
+      <div class="container-fluid">
+        <%= yield %>
+      </div>
+      <!-- /.container-fluid -->
+
+      <!-- Sticky Footer -->
+      <%= render partial: "layouts/backoffice_shared/footer" %>
+    </div>
+    <!-- /.content-wrapper -->
+  </div>
+  <!-- /#wrapper -->
+
+  <%= render partial: "layouts/backoffice_shared/logout_modal" %>
 </body>
 </html>

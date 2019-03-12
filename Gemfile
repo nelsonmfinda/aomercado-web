@@ -99,6 +99,7 @@ source 'https://rails-assets.org' do
   # gem 'rails-assets-bootstrap-markdown'
   gem 'rails-assets-EasyAutocomplete'
   gem 'rails-assets-notifyjs'
+  gem 'rails-assets-jquery-easing-original'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

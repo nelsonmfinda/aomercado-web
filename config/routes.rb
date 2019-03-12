@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   namespace :backoffice do
     get 'dashboard', to: 'dashboard#index'
+    get 'categories', to: 'categories#index'
   end
 
   devise_for :admins

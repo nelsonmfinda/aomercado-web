@@ -1,0 +1,47 @@
+<!-- Breadcrumbs-->
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="index.html">Dashboard</a>
+  </li>
+  <li class="breadcrumb-item active">Categories Page</li>
+</ol>
+<h1>Backoffice::Categories#index</h1>
+
+<div class="col-sm-10 offset-1">
+  <div class="card mt-5 mb-5">
+    <div class="card-header">Categories</div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Descrição</th>
+                <th scope="col">Atualizado Em</th>
+                <th scope="col">Criado Em</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @categories.each do |category| %>
+              <tr>
+                <th scope="row"><%= category.id %></th>
+                <td><%= category.description %></td>
+                <td><%= category.updated_at %></td>
+                <td><%= category.created_at %></td>
+                <td>
+                  <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-primary">Edit</button>
+                    <button type="button" class="btn btn-danger">Delete</button>
+                  </div>
+                </td>
+              </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

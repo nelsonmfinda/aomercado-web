@@ -11,3 +11,4 @@
 // about supported directives.
 //
 //= require backoffice/dashboard
+//= require jquery-easing-original

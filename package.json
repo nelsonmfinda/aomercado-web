@@ -13,6 +13,9 @@
     "type": "git",
     "url": "git+https://github.com/nelsonmfinda/aomercado-web.git"
   },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "5.7.0"
+  },
   "keywords": [
     "mercado",
     "virtual",

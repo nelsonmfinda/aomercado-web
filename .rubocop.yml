@@ -1,12 +1,13 @@
-##
-# .rubocop.yml
+require:
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rspec
 
 AllCops:
-  TargetRubyVersion: 2.5
+  TargetRubyVersion: 2.5.3
   Include:
     - 'config.ru'
     - 'Gemfile'
-    - 'Guardfile'
     - 'Rakefile'
 
   Exclude:
@@ -28,10 +29,6 @@ Documentation:
 IndentationConsistency:
   EnforcedStyle: 'rails'
 
-Metrics/BlockLength:
-  Exclude:
-    - 'Guardfile'
-
 Naming/FileName:
   Exclude:
     - 'Gemfile'
@@ -41,13 +38,6 @@ Naming/FileName:
 Rails:
   Enabled: true
 
-
-##
-# ./spec/.rubocop.yml
-
-inherit_from:
-  - ../.rubocop.yml
-
 StringLiterals:
   EnforcedStyle: double_quotes
   Exclude:
@@ -56,19 +46,3 @@ StringLiterals:
 # describe block
 Metrics/BlockLength:
   Enabled: false
-
-
-##
-# ./spec/fabricators/.rubocop.yml
-
-inherit_from:
-  - ../../.rubocop.yml
-
-
-##
-# ./spec/support/.rubocop.yml
-
-inherit_from:
-  - ../../.rubocop.yml
-
-  

@@ -1,4 +1,6 @@
---require spec_helper
+--format Fuubar
 --profile
 --color
---format documentation
+--tag ~performance
+--require spec_helper
+--require rails_helper

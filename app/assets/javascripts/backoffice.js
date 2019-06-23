@@ -11,4 +11,5 @@
 // about supported directives.
 //
 //= require backoffice/dashboard
+//= require notifyjs
 //= require jquery-easing-original

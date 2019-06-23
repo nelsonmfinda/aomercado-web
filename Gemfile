@@ -43,31 +43,50 @@ group :development, :test do
   gem 'better_errors'
   # Testing framework to Ruby on Rails as a drop-in alternative to its default testing framework, Minitest.
   gem 'rspec-rails', '~> 3.8'
+  # The instafailing RSpec progress bar formatter
+  gem "fuubar", "~> 2.0"
+  # Code style checking for RSpec files. A plugin for the RuboCop code style enforcing & linting tool.
+  gem "rubocop-rspec", "~> 1.33"
+  # A collection of RuboCop cops to check for performance optimizations in Ruby code.
+  gem "rubocop-performance", "~> 0.0.1"
+  # Automatic Rails code style checking tool.
+  # A RuboCop extension focused on enforcing Rails best practices and coding conventions.
+  gem "rubocop-rails", "~> 2.0", ">= 2.0.1"
+  # A library for generating fake data such as names, addresses, and phone numbers.
+  gem 'faker'
 end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  # Spring speeds up development by keeping your application
+  # running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  # Use Pry as your rails console
+  gem 'pry-rails', '~> 0.3.9'
 end
 
-# A library for generating fake data such as names, addresses, and phone numbers.
-gem 'faker'
+group :test do
+  # database_cleaner is not required, but highly recommended
+  gem "database_cleaner"
+  # Shoulda Matchers provides RSpec- and Minitest-compatible one-liners that test common Rails functionality
+  gem "shoulda-matchers"
+  # A library for setting up Ruby objects as test data
+  gem "factory_bot_rails", "~> 5.0", ">= 5.0.1"
+  # Makes http fun! Also, makes consuming restful web services dead easy
+  gem 'httparty', '~> 0.16.4'
+  # Cucumber Generator and Runtime for Rails
+  gem 'cucumber-rails', require: false
+end
+
 # Flexible authentication solution for Rails with Warden
 gem 'devise'
 # Simple, efficient background processing for Ruby
 gem 'sidekiq'
 # Provides a simple and extremely flexible way to upload files from Ruby applications
 gem 'carrierwave', '~> 1.0'
-# A configurable and documented Rails view helper for adding gravatars into your Rails application
-# gem 'gravatar_image_tag', github: 'mdeering/gravatar_image_tag'
-# RuboCop is a Ruby static code analyzer and code formatter
-gem 'rubocop', '~> 0.63.1', require: false
-# RuboCop configuration which has the same code style checking as official Ruby on Rails
-# gem "rubocop-rails_config"
 # Internationalization (aka i18n) is a "means of adapting computer software to different languages,
 # regional differences and technical requirements of a target market".
 gem 'devise-i18n'
@@ -81,18 +100,10 @@ gem 'enum_help'
 # gem 'pundit'
 # Integration of RubyMoney - Money with Rails
 gem 'money-rails'
-# Easy file attachment management for ActiveRecord
-# gem 'paperclip', '~> 5.0.0'
-# The safe Markdown parser, reloaded.
-# gem 'redcarpet'
 # FriendlyId is the “Swiss Army bulldozer” of slugging and permalink plugins for ActiveRecord
 gem 'friendly_id'
-# If Turbolinks are not enough for you. Wiselinks makes your application work faster.
-# gem 'wiselinks'
-# A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for Ruby webapps
-# gem 'kaminari'
-# Translations for the kaminari gem
-# gem  'kaminari-i18n'
+# Autoload dotenv in Rails
+gem 'dotenv-rails', '~> 2.7', '>= 2.7.3'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap'

@@ -1,6 +1,8 @@
 class Backoffice::AdminsController < BackofficeController
+  before_action :set_admin, only: [:edit, :update]
+
   def index
-    @admin = Admin.all
+    @admins = Admin.all
   end
 
   def new

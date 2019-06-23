@@ -1,0 +1,53 @@
+<!-- Breadcrumbs-->
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <%= link_to  "Dashboard", backoffice_path %>
+  </li>
+  <li class="breadcrumb-item active">Admins Page</li>
+</ol>
+
+<div class="col-sm-10 offset-1">
+  <div class="card mt-5 mb-5">
+    <div class="card-header">
+      Administadores
+    <%= link_to new_backoffice_category_path, class: "btn btn-success float-right" do %>
+      <i class="fa fa-edit"></i> Nova
+    <% end %>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Descrição</th>
+                <th scope="col">Atualizado Em</th>
+                <th scope="col">Criado Em</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @categories.each do |category| %>
+              <tr>
+                <th scope="row"><%= category.id %></th>
+                <td><%= category.description %></td>
+                <td><%= category.updated_at %></td>
+                <td><%= category.created_at %></td>
+                <td>
+                  <div class="btn-group" role="group">
+                  <%= link_to edit_backoffice_category_path(category), class: "btn btn-primary" do %>
+                    <i class="fa fa-edit"></i> Editar
+                  <% end %>
+                    <button type="button" class="btn btn-danger disabled">Delete</button>
+                  </div>
+                </td>
+              </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

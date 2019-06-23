@@ -9,12 +9,13 @@
   <li class="nav-item">
   <%= link_to backoffice_categories_path, class: "nav-link" do %>
     <i class="fas fa-fw fa-chart-area"></i>
-    <span>Categories</span>
+    <span>Categorias</span>
   <% end %>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="tables.html">
-      <i class="fas fa-fw fa-table"></i>
-      <span>Tables</span></a>
+    <%= link_to backoffice_admins_path, class: "nav-link" do %>
+      <i class="fas fa-users fa-chart-area"></i>
+      <span>Administradores</span>
+    <% end %>
   </li>
 </ul>

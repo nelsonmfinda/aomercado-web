@@ -1,52 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-  <title>aoMercado | BackOffice</title>
+    <title>aoMercado | BackOffice</title>
 
-  <%= csrf_meta_tags %>
-  <%= csp_meta_tag %>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
 
-  <meta name="description" content="Mini loja virtual, um projecto do curso completo de Ruby on Rails">
-  <meta name="keywords" content="mercado, virtual, online, compras, pagamentos, loja, e-commerce"/>
-  <meta name="robots" content="index, follow">
-  <meta name="author" content="Nelson Mfinda">
-  <meta name="theme-color" content="#FFFFFF">
+    <meta name="description" content="Mini loja virtual, um projecto do curso completo de Ruby on Rails">
+    <meta name="keywords" content="mercado, virtual, online, compras, pagamentos, loja, e-commerce"/>
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Nelson Mfinda">
+    <meta name="theme-color" content="#FFFFFF">
 
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= stylesheet_link_tag    'backoffice', media: 'all', 'data-turbolinks-track': 'reload' %>
-  
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'backoffice', 'data-turbolinks-track': 'reload' %>
-</head>
-<body>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'backoffice', media: 'all', 'data-turbolinks-track': 'reload' %>
+    
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'backoffice', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
 
-  <%= render partial: "layouts/backoffice_shared/topbar" %>
+    <%= render partial: "layouts/backoffice_shared/topbar" %>
 
-  <div id="wrapper">
-    <!-- Sidebar -->
-    <%= render partial: "layouts/backoffice_shared/sidebar" %>
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <%= render partial: "layouts/backoffice_shared/sidebar" %>
 
-    <div id="content-wrapper">
+      <div id="content-wrapper">
 
-      <div class="container-fluid">
-        <%= yield %>
+        <div class="container-fluid">
+          <%= yield %>
+        </div>
+        <!-- /.container-fluid -->
+
+        <!-- Sticky Footer -->
+        <%= render partial: "layouts/backoffice_shared/footer" %>
       </div>
-      <!-- /.container-fluid -->
+      <!-- /.content-wrapper -->
 
-      <!-- Sticky Footer -->
-      <%= render partial: "layouts/backoffice_shared/footer" %>
+      <!-- Scroll to Top Button-->
+      <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+      </a>
     </div>
-    <!-- /.content-wrapper -->
+    <!-- /#wrapper -->
 
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-      <i class="fas fa-angle-up"></i>
-    </a>
-  </div>
-  <!-- /#wrapper -->
-</body>
+      <% if notice %>
+        <script>
+          $.notify("<%= notice %>", "success");
+        </script>
+      <% end %>
+  </body>
 </html>

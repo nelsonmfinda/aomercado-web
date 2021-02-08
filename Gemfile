@@ -97,7 +97,7 @@ gem "devise"
 gem "sidekiq"
 # Provides a simple and extremely flexible way to
 # upload files from Ruby applications
-gem "carrierwave", "~> 1.0"
+gem "carrierwave", "~> 1.3"
 # Internationalization (aka i18n) is a "means of adapting computer
 # software to different languages,
 # regional differences and technical requirements of a target market".

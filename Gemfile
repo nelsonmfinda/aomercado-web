@@ -86,7 +86,7 @@ group :test do
   # A library for setting up Ruby objects as test data
   gem "factory_bot_rails", "~> 5.0", ">= 5.0.1"
   # Makes http fun! Also, makes consuming restful web services dead easy
-  gem "httparty", "~> 0.16.4"
+  gem "httparty", "~> 0.21.0"
   # Cucumber Generator and Runtime for Rails
   gem "cucumber-rails", require: false
 end
